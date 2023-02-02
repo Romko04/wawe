@@ -1,0 +1,234 @@
+/*Обнулення*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+    height: 100vh;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    flex: 1 1 auto;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*------БАЗОВІ-ВЛАСТИВОСТІ----*/
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*---------HEADER-----*/
+
+.header__container {
+    padding: 35px 15px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.header__logo {
+    position: relative;
+    width: 170px;
+    margin-right: 15px;
+}
+
+.header__logo-link {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #fff;
+}
+
+.logo::after {
+    content: 'w';
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    position: absolute;
+    top: -14px;
+    left: 17px;
+    color: #fff;
+}
+
+
+.header__menu-items {
+    display: flex;
+}
+.header__menu-link {
+    margin-right: 45px;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+    color: black;
+    position: relative;
+}
+.menu__link-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #00B2A0;
+}
+/*-------MAIN------*/
+/* .school-poster {
+    background-image: url('../img/schoolImg.png');
+    top: 0;
+    position: absolute;
+    background-position: center;
+    z-index: 0;
+    width: 100%;
+    height: 1080px;
+}
+
+.school-poster::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #01353E 0%, rgba(51, 51, 51, 0.595076) 31.64%, rgba(51, 51, 51, 0.222586) 74.35%, rgba(51, 51, 51, 0) 99.87%);
+}
+.footer{
+    position: relative;
+    z-index: 2;
+}
+/*------FOOTER------*/
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0;
+    background-color: #00B2A0;
+}
+.footer__logo {
+    position: relative;
+    width: 170px;
+    margin-right: 15px;
+}
+.footer__logo-link{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #fff;
+}
