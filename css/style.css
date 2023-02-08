@@ -80,6 +80,7 @@ body {
 }
 
 .wrapper {
+    position: relative;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -126,6 +127,56 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     text-align: center;
+}
+.modal{
+    background-color: rgba(0,0,0,0); 
+    position: fixed;
+    left: -300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal--active{
+    background-color: rgba(0,0,0,0.8); 
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.modal__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    width: 70%;
+
+}
+.modal__content-img{
+    width: 100%;
+    height: 80%;
+}
+.title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.6px;
+
+    color: #01353E;
+}
+.text{
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: 0.6px;
+    color: #242121;
+}
+.scroll--block {
+    overflow: hidden;
 }
 
 /*---------HEADER-----*/
@@ -264,25 +315,6 @@ body {
 .about {
     text-align: center;
 }
-.title{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: 0.6px;
-
-    color: #01353E;
-}
-.text{
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 129%;
-    letter-spacing: 0.6px;
-    color: #242121;
-}
 .about__title {
     margin-bottom: 95px;
 }
@@ -413,6 +445,8 @@ body {
 }
 .gallery__title{
     margin-bottom: 212px;
+    position: relative;
+    z-index: -1;
 }
 .gallery__nav {
     margin-bottom: 50px;
@@ -441,7 +475,6 @@ body {
 }
 .gallery__img:hover{
     cursor: pointer;
-    opacity: .6;
 }
 .gallery__img{
     max-width: 100%;
@@ -452,7 +485,8 @@ body {
     grid-column: span 2;
 }
 .hide{
-    display: none;
+    position: absolute;
+    left: -400%;
 }
 .gallery__vievs{
     display: flex;
@@ -462,7 +496,7 @@ body {
 /*------FOOTER------*/
 .footer {
     position: relative;
-    z-index: 2;
+    z-index: -1;
 }
 
 .footer__content {

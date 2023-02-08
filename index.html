@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="">
     <div class="wrapper">
         <header class="header">
             <div class="header__container container">
@@ -200,28 +200,20 @@
                     <img src="img/teachers.jpg" alt="teacher" class="teachers__img">
                 </div>
             </section>
-            <section class="gallery">
+            <section class="gallery"> 
                 <div class="gallery__container container">
                     <h3 class="gallery__title title title--slash">ГАЛЕРЕЯ</h3>
                     <div class="gallery__content">
                         <nav class="gallery__nav">
                             <ul class="gallery__list">
-                                <li class="gallery__list-item"><a class="gallery__item-link gallery__item-link--active" data-f="all" href="#">ВСЕ</a></li>
-                                <li class="gallery__list-item"><a class="gallery__item-link" data-f="tourusts" href="#">ТУРИСТЫ</a></li>
+                                <li class="gallery__list-item"><a class="gallery__item-link" data-f="all" href="#">ВСЕ</a></li>
+                                <li class="gallery__list-item"><a class="gallery__item-link gallery__item-link--active" data-f="tourusts" href="#">ТУРИСТЫ</a></li>
                                 <li class="gallery__list-item"><a class="gallery__item-link" data-f="nature"  href="#">ПРИРОДА</a></li>
                                 <li class="gallery__list-item"><a class="gallery__item-link" data-f="profy" href="#">ПРОФИ</a></li>
                             </ul>
                         </nav>
                         <div class="gallery__vievs">
-                            <div class="gallery__profy gallery__items">
-                                <div class="gallery__item gallery__img-big"><img class="gallery__img" src="img/profy/gallery1.jpg" alt=""></div>
-                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery2.jpg" alt=""></div>
-                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery3.jpg" alt=""></div>
-                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery4.jpg" alt=""></div>
-                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery5.jpg" alt=""></div>
-                                <div class="gallery__item gallery__img-big"><img class="gallery__img" src="img/profy/gallery6.jpg" alt=""></div>
-                            </div>
-                            <div class="gallery__tourusts gallery__items hide">
+                            <div data-f="tourusts" class="gallery__tourusts gallery__items">
                                 <div class="gallery__item gallery__img-big"><img class="gallery__img" src="img/tourists/tourists1.jpg" alt=""></div>
                                 <div class="gallery__item"><img class="gallery__img" src="img/tourists/tourists2.png" alt=""></div>
                                 <div class="gallery__item"><img class="gallery__img" src="img/tourists/tourists3.jpg" alt=""></div>
@@ -229,7 +221,15 @@
                                 <div class="gallery__item"><img class="gallery__img" src="img/tourists/tourists5.jpg" alt=""></div>
                                 <div class="gallery__item gallery__img-big"><img class="gallery__img" src="img/tourists/tourists6.jpg" alt=""></div>
                             </div>
-                            <div class="gallery__nature gallery__items hide">
+                            <div data-f="profy" class="gallery__profy gallery__items hide">
+                                <div class="gallery__item gallery__img-big"><img class="gallery__img" src="img/profy/gallery1.jpg" alt=""></div>
+                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery2.jpg" alt=""></div>
+                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery3.jpg" alt=""></div>
+                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery4.jpg" alt=""></div>
+                                <div class="gallery__item"><img class="gallery__img" src="img/profy/gallery5.jpg" alt=""></div>
+                                <div class="gallery__item gallery__img-big"><img class="gallery__img" src="img/profy/gallery6.jpg" alt=""></div>
+                            </div>
+                            <div data-f="nature" class="gallery__nature gallery__items hide">
                                 <div  class="gallery__item gallery__img-big"><img class="gallery__img" src="img/nature/nature1.jpg" alt=""></div>
                                 <div  class="gallery__item"><img class="gallery__img" src="img/nature/nature2.jpg" alt=""></div>
                                 <div  class="gallery__item"><img class="gallery__img" src="img/nature/nature3.jpg" alt=""></div>
@@ -237,7 +237,11 @@
                                 <div  class="gallery__item"><img class="gallery__img" src="img/nature/nature5.jpg" alt=""></div>
                                 <div  class="gallery__item gallery__img-big"><img class="gallery__img" src="img/nature/nature6.jpg" alt=""></div>
                             </div>
-                        </div>      
+                        </div>    
+                </div>
+                <div class="modal">
+                    <div class="modal__content">
+                    </div>
                 </div>
             </section>
         </main>
