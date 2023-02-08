@@ -129,20 +129,27 @@ body {
     text-align: center;
 }
 .modal{
-    background-color: rgba(0,0,0,0); 
-    position: fixed;
-    left: -300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.modal--active{
-    background-color: rgba(0,0,0,0.8); 
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: modal;
+    animation-duration: 0.6s;
 }
+@keyframes modal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .modal__content{
     display: flex;
     align-items: center;
@@ -156,6 +163,20 @@ body {
     width: 100%;
     height: 80%;
 }
+/* @keyframes modal {
+    0%{
+        left: -100%;
+    }
+    50%{
+        
+    }
+    100%{
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+} */
 .title{
     font-family: 'Raleway';
     font-style: normal;
@@ -377,7 +398,6 @@ body {
 .services__item-img {
     margin-right: 7px;
 }
-
 .services__feedback {
     margin-top: 100px;
     display: flex;
@@ -415,6 +435,7 @@ body {
     gap: 30px;
 }
 
+
 .teachers{
     position: relative;
 }
@@ -439,6 +460,8 @@ body {
     top: 0;
     right: 0;
 }
+
+
 
 .gallery__container{
     padding-bottom: 300px;
@@ -469,7 +492,7 @@ body {
 }
 .gallery__items {
     display: grid;
-    gap: 10px 51px;
+    gap: 10px 40px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
 }
@@ -485,14 +508,36 @@ body {
     grid-column: span 2;
 }
 .hide{
-    position: absolute;
-    left: -400%;
+    display: none;
 }
 .gallery__vievs{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
+.qoute {
+    display: flex;
+    padding: 80px 0;
+    background-color: #F8F8F8;
+    align-items: center;
+    justify-content: center;
+}
+.qoute__title {
+    font-family: 'Roboto Condensed';
+font-style: italic;
+font-weight: 400;
+font-size: 36px;
+line-height: 111%;
+letter-spacing: 0.6px;
+color: #242121;
+}
+.qoute__author {
+    margin-right: -165px;
+    text-align: right;
+}
+
+
 /*------FOOTER------*/
 .footer {
     position: relative;

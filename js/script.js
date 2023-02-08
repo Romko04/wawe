@@ -1,7 +1,6 @@
 //--GALLERY
 const galleryNode = document.querySelectorAll('.gallery__items')
-let modalGallery = document.querySelector('.modal__content')
-let modal = document.querySelector('.modal')
+let modalGallery = document.querySelector('.gallery__modal')
 document.addEventListener('click', (e) => {
     e.preventDefault()
     if (e.target.classList.contains('gallery__item-link')) {
@@ -20,7 +19,7 @@ function filter(viev) {
         galleryNode.forEach(i => i.classList.remove('hide'))
         return
     }
-    galleryNode.forEach(v => v.dataset.f === viev? v.classList.remove('hide'): v.classList.add('hide'))
+    galleryNode.forEach(v => v.dataset.f === viev ? v.classList.remove('hide') : v.classList.add('hide'))
 }
 function addActiveClass(e) {
     let currentItem = document.querySelector('.gallery__item-link--active')
@@ -30,17 +29,21 @@ function addActiveClass(e) {
 }
 function openModal(src) {
     const modalHtml = `
-     <img class="modal__content-img" src="${src}" alt="">
+    <div class="modal">
+        <div class="modal__content">
+            <img class="modal__content-img" src="${src}" alt="">
+        </div>
+    </div>
      `
     modalGallery.innerHTML = modalHtml
     document.body.classList.add('scroll--block')
-    modal.classList.add('modal--active')
+
 }
 function closeModal() {
-    modal.classList.remove('modal--active')
+    modalGallery.innerHTML = ''
     document.body.classList.remove('scroll--block')
 
 }
- 
+
  //--MODAL
 
