@@ -53,7 +53,8 @@ function closeModal() {
     document.body.classList.remove('scroll--block')
 
 }
-//--Counter
+//--COUNTER
+
 function counter(num, elem) {
     const el = document.querySelector('#' + elem)
     let time = 4000
@@ -71,3 +72,26 @@ function counter(num, elem) {
     }, t);
     counterNoname.classList.add('active')
 }
+
+
+//--CAROUSEL
+function carousel() {
+    const slides = document.querySelectorAll('.slider__item')
+    slidesList = []
+    slides.forEach(i=>{slidesList.push(i)})
+    step = 1
+    setInterval(() => {
+        step === slidesList.length ? step = 0 : null
+        slides.forEach(i => !i.classList.contains('hide')? i.classList.add('hide'):'')
+        btnSlide = document.querySelector(`[value=${step}]`)
+        btnSlide.classList.remove('btn--active')
+        slidesList[step].classList.remove('hide')
+        step ++
+        btnSlide = document.querySelector('#'+step)
+        btnSlide.classList.add('btn--active')
+        
+
+    }, 1000);
+    
+}
+carousel()
