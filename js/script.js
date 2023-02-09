@@ -1,6 +1,7 @@
 //--GALLERY
 const galleryNode = document.querySelectorAll('.gallery__items')
 let modalGallery = document.querySelector('.gallery__modal')
+let counterNoname = document.querySelector('.noname__counter')
 document.addEventListener('click', (e) => {
     e.preventDefault()
     if (e.target.classList.contains('gallery__item-link')) {
@@ -12,6 +13,14 @@ document.addEventListener('click', (e) => {
     }
     if (e.target.classList.contains('modal')) {
         closeModal()
+    }
+})
+document.addEventListener('scroll', (e) => {
+    let noname = document.querySelector('.noname')
+    let scrolTop = window.scrollY
+    if (scrolTop >= noname.offsetTop && !counterNoname.classList.contains('active')) {
+        const counters = document.querySelectorAll('.count__value')
+        counters.forEach(e => counter(e.dataset.value, e.id))
     }
 })
 function filter(viev) {
@@ -44,6 +53,21 @@ function closeModal() {
     document.body.classList.remove('scroll--block')
 
 }
-
- //--MODAL
-
+//--Counter
+function counter(num, elem) {
+    const el = document.querySelector('#' + elem)
+    let time = 4000
+    let step = 10
+    num < 100 || num % 2 ? step = 1 : null
+    let n = 0
+    let t = Math.round((time / (num / step)))
+    let interval = setInterval(() => {
+        if (n == num) {
+            clearInterval(interval)
+            return
+        }
+        n = n + step
+        el.innerHTML = n
+    }, t);
+    counterNoname.classList.add('active')
+}

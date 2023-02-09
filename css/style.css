@@ -516,6 +516,8 @@ body {
     gap: 20px;
 }
 
+
+
 .qoute {
     display: flex;
     padding: 80px 0;
@@ -538,6 +540,78 @@ color: #242121;
 }
 
 
+
+.noname__container {
+    padding: 200px 15px;
+}
+
+.noname__video {
+    margin-bottom: 200px;
+}
+.noname__counter {
+    padding: 0 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.count__value {
+    font-family: 'Roboto Condensed';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 75px;
+letter-spacing: 0.6px;
+
+color: #01353E;
+}
+
+.blog__title {
+    text-align: center;
+    margin-bottom: 230px;
+}
+.blog{
+    padding: 0 0 200px;
+}
+.slider{
+    width: 100%;
+}
+.slider__img img{
+    width: 100%;
+}
+.slider__img{
+    position: relative;
+}
+.slider__img::after {
+    width: 100%;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(36, 33, 33, 0.5);
+}
+.slider__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.slider__btn {
+    position: relative;
+    margin-right: 15px;
+}
+.btn--active .slider__btn::after{
+    background: #00B2A0;
+}
+.slider__btn::after{
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 75px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
 /*------FOOTER------*/
 .footer {
     position: relative;
