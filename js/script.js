@@ -14,6 +14,12 @@ document.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal')) {
         closeModal()
     }
+    if (e.target.classList.contains('slider__btn')) {
+        const sliderBtns = document.querySelectorAll('.slider__btn')
+        clearInterval(interval)
+        sliderBtns.forEach(btn => btn.classList.contains('btn--active')? btn.classList.remove('btn--active'):'')
+        carousel(e.target.dataset.value)
+    }
 })
 document.addEventListener('scroll', (e) => {
     let noname = document.querySelector('.noname')
@@ -73,25 +79,34 @@ function counter(num, elem) {
     counterNoname.classList.add('active')
 }
 
-
 //--CAROUSEL
-function carousel() {
-    const slides = document.querySelectorAll('.slider__item')
-    slidesList = []
-    slides.forEach(i=>{slidesList.push(i)})
-    step = 1
-    setInterval(() => {
-        step === slidesList.length ? step = 0 : null
-        slides.forEach(i => !i.classList.contains('hide')? i.classList.add('hide'):'')
-        btnSlide = document.querySelector(`[value=${step}]`)
-        btnSlide.classList.remove('btn--active')
-        slidesList[step].classList.remove('hide')
+function carousel(count) {
+    chandeClassCarousel(count, true)
+    slidesList = slidesFun()
+    slidesList[count].classList.remove('hide')
+    step = count
+    interval = setInterval(() => {
+        slidesList.forEach(i => !i.classList.contains('hide')? i.classList.add('hide'):'')
+        chandeClassCarousel(step, false)
         step ++
-        btnSlide = document.querySelector('#'+step)
-        btnSlide.classList.add('btn--active')
-        
-
+        step > slidesList.length-1 ? step = 0 : null
+        slidesList[step].classList.remove('hide')
+        chandeClassCarousel(step, true)
     }, 1000);
-    
 }
-carousel()
+carousel(0)
+function chandeClassCarousel(count, action) {
+    btnSlide = document.querySelector(`[data-value="${count}"]`)
+    action?btnSlide.classList.add('btn--active'):btnSlide.classList.remove('btn--active')
+}
+function slidesFun() {
+    const slides = document.querySelectorAll('.slider__item')
+    let slidesList = []
+    slides.forEach(i=>{
+        slidesList.push(i)
+        slides.forEach(i => !i.classList.contains('hide')? i.classList.add('hide'):'')
+    })
+    return slidesList
+}
+
+
