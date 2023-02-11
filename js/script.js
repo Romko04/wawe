@@ -92,7 +92,7 @@ function carousel(count) {
         step > slidesList.length-1 ? step = 0 : null
         slidesList[step].classList.remove('hide')
         chandeClassCarousel(step, true)
-    }, 1000);
+    }, 5000);
 }
 carousel(0)
 function chandeClassCarousel(count, action) {
