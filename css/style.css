@@ -288,6 +288,7 @@ body {
     top: 0;
     position: absolute;
     background-position: center;
+    background-size: cover;
     z-index: 0;
     width: 100%;
     height: 1080px;
@@ -466,10 +467,19 @@ body {
 .teachers {
     position: relative;
 }
-
+.teachers__img{
+    height: 850px;
+    width: 960px;
+}
+.teachers__title{
+    text-align: center;
+}
 .teachers__container {
     padding-bottom: 200px;
-    padding-top: 35px;
+    /* padding-top: 35px; */
+    display: flex;
+    
+    justify-content: space-between;
 }
 
 .teachers__content {
@@ -477,6 +487,7 @@ body {
     flex-direction: column;
     gap: 100px;
     max-width: 560px;
+    margin: 200px 0 0 462px;
 }
 
 .teachers__text {
@@ -485,12 +496,6 @@ body {
     gap: 30px;
 }
 
-.teachers__img {
-    width: 700px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 
 
 
@@ -714,7 +719,18 @@ body {
 .team__teachers {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+}
+.teachers__container {
+    display: flex;
+}
+.teachers__content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: 560px;
+    margin: 0 0 0 15%;
+    padding: 72px 15px;
+    /* margin: 0 */
 }
 
 .team__teacher {
@@ -973,3 +989,159 @@ color: #00B2A0;
     line-height: 42px;
     color: #fff;
 }
+
+
+/*-----------ADAPTIV*/
+/*pc*/
+@media (max-width: 1695px) {
+    .teachers__container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .teachers__content {
+        margin: 0;
+        /* margin: 0 */
+    }
+  }
+  /*tablet*/
+  @media (max-width: 991.98px) {
+    .title--slash{
+        font-size: 60px;
+    }
+    .container{
+      max-width: 750px;
+    }
+    .about__content-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .about__content-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 30px;
+    }
+    .services__items {
+        flex-direction: column;
+        gap: 75px;
+    }
+    .services__feedback {
+        margin-top: 100px;
+        flex-direction: column;
+        gap: 82px;
+    }
+    .noname__counter {
+        padding: 0 200px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .team__teachers {
+        gap: 50px;
+        flex-direction: column;
+    }
+    .prices__packages {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+    .feedback__title {
+        margin: 0;
+    }
+    .feedback__content {
+        gap: 50px;
+        flex-direction: column;
+    }
+    .qoute__author {
+        /* margin-right: -165px; */
+        margin-right: 0;
+        text-align: right;
+    }
+    .slider__content {
+        top: 15%;
+        left: 15%;
+    }
+    .feedback__title {
+        margin: 100px 0;
+    }
+
+    .teachers__img {
+        height: 446px;
+        width: 100%;
+    }
+    .header__scroll {
+        margin-top: 749px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        z-index: 2;
+    }
+  }
+  /*mobile*/
+  @media (max-width: 767.98px) {
+    .container{
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .poster__title {
+        font-size: 90px;
+        line-height: 147px;
+    }
+    .poster__text {
+        text-align: center;
+    }
+    .header__poster {
+        
+        height: 700px;
+    }
+    .about__container {
+        padding: 0px 15px 0px;
+    }
+    .about__content-item {
+        align-items: flex-start;
+    }
+    .teachers__text {
+        text-align: left;
+    }
+    .teachers__container {
+        padding-bottom: 100px;
+    }
+    .qoute {
+        display: flex;
+        padding: 80px 15px;
+        background-color: #F8F8F8;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider__content {
+        top: 6%;
+        left: 14%;
+    }
+    .slider__item img {
+        height: 615px;
+    }
+    .team__teachers {
+        gap: 50px;
+        flex-direction: column;
+    }
+    .slider__btn {
+        margin-right: 9px;
+    }
+    .title--slash{
+        font-size: 50px;
+    }
+    .header__scroll {
+        margin-top: 405px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        z-index: 2;
+    }
+    .about__title{
+             margin-top: 150px;
+    };
+    }
+  }
