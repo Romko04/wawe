@@ -1,3 +1,4 @@
+
 //--GALLERY
 const galleryNode = document.querySelectorAll('.gallery__items')
 let modalGallery = document.querySelector('.gallery__modal')
@@ -107,6 +108,15 @@ function slidesFun() {
         slides.forEach(i => !i.classList.contains('hide')? i.classList.add('hide'):'')
     })
     return slidesList
+}
+const btn = document.querySelector('.header__burger');
+const menuBody = document.querySelector('.menu__body');
+btn.addEventListener('click', mouseclick);
+function mouseclick() {
+    menuBody.classList.toggle('_active');
+    btn.classList.toggle('_active');
+    btn.classList.contains('_active')?document.body.classList.add('scroll--block'):document.body.classList.remove('scroll--block')
+
 }
 
 

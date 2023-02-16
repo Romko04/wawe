@@ -5,12 +5,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Wawe</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap"
             rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
@@ -22,19 +23,22 @@
                         <a class="header__logo-link logo" href="index.html">w</a>
                     </div>
                     <nav class="header__menu">
-                        <ul class="header__menu-items">
-                            <li class="header__menu-item"><a class="header__menu-link menu__link-active" href="">О нас</a>
-                            </li>
-                            <li class="header__menu-item"><a class="header__menu-link" href="">Услуги</a></li>
-                            <li class="header__menu-item"><a class="header__menu-link" href="">Стоимость</a></li>
-                            <li class="header__menu-item"><a class="header__menu-link" href="">Блог</a></li>
-                            <li class="header__menu-item"><a class="header__menu-link" href="">Команда</a></li>
-                            <li class="header__menu-item"><a class="header__menu-link" href="">Контакты</a></li>
-                        </ul>
+                        <nav class="menu__body">
+                            <ul class="header__menu-items">
+                                <li class="header__menu-item"><a class="header__menu-link menu__link-active" href="">О нас</a>
+                                </li>
+                                <li class="header__menu-item"><a class="header__menu-link" href="">Услуги</a></li>
+                                <li class="header__menu-item"><a class="header__menu-link" href="">Стоимость</a></li>
+                                <li class="header__menu-item"><a class="header__menu-link" href="">Блог</a></li>
+                                <li class="header__menu-item"><a class="header__menu-link" href="">Команда</a></li>
+                                <li class="header__menu-item"><a class="header__menu-link" href="">Контакты</a></li>
+                            </ul>
+                        </nav>
                     </nav>
+                    <button class="header__burger"><span></span></button>
                 </div>
                 <div class="header__poster">
-                    <div class="poster__content">
+                    <div class="poster__content" data-aos="fade-up">
                         <h1 class="poster__title">WAWE</h1>
                         <p class="poster__text">Школа серфинга на канарских Островах</p>
                     </div>
@@ -46,8 +50,8 @@
             <main class="main">
                 <section class="about">
                     <div class="about__container container">
-                        <h3 class="about__title title title--slash"> О ШКОЛЕ, О СЕРФИНГЕ, О КАНАРАХ </h3>
-                        <div class="about__content-items">
+                        <h3  class="about__title title title--slash" data-aos="fade-up">О ШКОЛЕ, О СЕРФИНГЕ, О КАНАРАХ </h3>
+                        <div  class="about__content-items" data-aos="fade-right">
                             <div class="about__content-item">
                                 <p class="about__content-text text">Канарские острова не случайно называют европейскими
                                     Гавайями
@@ -105,8 +109,8 @@
                 </section>
                 <section class="services">
                     <div class="services__container container">
-                        <h3 class="services__title title title--slash">В ШКОЛЕ ВЫ ПОЛУЧИТЕ</h3>
-                        <div class="services__items">
+                        <h3 class="services__title title title--slash" data-aos="fade-up"" >В ШКОЛЕ ВЫ ПОЛУЧИТЕ</h3>
+                        <div class="services__items" data-aos="fade-right"">
                             <div class="services__item">
                                 <div class="services__item-top">
                                     <img class="services__item-img" src="img/sun.svg" alt="sun">
@@ -141,7 +145,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="services__feedback">
+                        <div class="services__feedback" data-aos="fade-left"">
                             <div class="services__feedback-statistic__items">
                                 <div class="services__statistic-item">
                                     <div class="services__statistic-item__top">
@@ -180,8 +184,8 @@
                 <section class="teachers">
                     <div class="teachers__container">
                         <div class="teachers__content">
-                            <h3 class="teachers__title title title--slash">ПОКОРЯЙ ВЕРШИНЫ</h3>
-                            <div class="teachers__text text">
+                            <h3 class="teachers__title title title--slash" data-aos="fade-up">ПОКОРЯЙ ВЕРШИНЫ</h3>
+                            <div class="teachers__text text" data-aos="fade-right"">
                                 <p>Преподаватели нашей школы серфинга в числе лучших серферов на Канарских островах. Среди
                                     них - чемпион Европы по лонгборду, который с радостью поделится опытом как с новичками,
                                     так и более опытными серферами.
@@ -197,14 +201,14 @@
                                     серфинга - только вы и тренер! П</p>
                             </div>
                         </div>
-                        <img src="img/teachers.jpg" alt="teacher" class="teachers__img">
+                        <img src="img/teachers.jpg" data-aos="zoom-in-left" alt="teacher" class="teachers__img">
                     </div>
                 </section>
                 <section class="gallery"> 
                     <div class="gallery__container container">
-                        <h3 class="gallery__title title title--slash">ГАЛЕРЕЯ</h3>
+                        <h3 class="gallery__title title title--slash" data-aos="fade-up">ГАЛЕРЕЯ</h3>
                         <div class="gallery__content">
-                            <nav class="gallery__nav">
+                            <nav class="gallery__nav" data-aos="flip-left">
                                 <ul class="gallery__list">
                                     <li class="gallery__list-item"><a class="gallery__item-link" data-f="all" href="#">ВСЕ</a></li>
                                     <li class="gallery__list-item"><a class="gallery__item-link gallery__item-link--active" data-f="tourusts" href="#">ТУРИСТЫ</a></li>
@@ -212,8 +216,8 @@
                                     <li class="gallery__list-item"><a class="gallery__item-link" data-f="profy" href="#">ПРОФИ</a></li>
                                 </ul>
                             </nav>
-                            <div class="gallery__vievs">
-                                <div data-f="tourusts" class="gallery__tourusts gallery__items">
+                            <div class="gallery__vievs" data-aos="fade-right">
+                                <div data-f="tourusts"  class="gallery__tourusts gallery__items">
                                     <div class="gallery__item gallery__img-big"><img class="gallery__img" src="img/tourists/tourists1.jpg" alt=""></div>
                                     <div class="gallery__item"><img class="gallery__img" src="img/tourists/tourists2.jpg" alt=""></div>
                                     <div class="gallery__item"><img class="gallery__img" src="img/tourists/tourists3.jpg" alt=""></div>
@@ -244,14 +248,14 @@
                     </div>
                 </section>
                 <section class="qoute">
-                    <div class="qoute__content">
+                    <div class="qoute__content" data-aos="fade-down" >
                         <h4 class="qoute__title">«Если сомневаешься – иди катайся.»</h4>
                         <p class="qoute__author text">Нэт Янг, первый Чемпион Мира по сёрфингу</p>
                     </div>
                 </section>
                 <section class="noname">
                     <div class="noname__container container">
-                        <div class="noname__video">
+                        <div class="noname__video" data-aos="zoom-in-down">
                             <iframe width="100%" height="600" src="https://www.youtube.com/embed/bir37qTl7_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         <div class="noname__counter">
@@ -276,8 +280,8 @@
                     </div>
                 </section>
                 <section class="blog">
-                    <h3 class="blog__title title title--slash">БЛОГ</h3>
-                    <div class="blog__slider">
+                    <h3 class="blog__title title title--slash" data-aos="fade-up">БЛОГ</h3>
+                    <div class="blog__slider" data-aos="fade-up">
                         <div class="slider__container">
                             <div data-count="0" class="slider__item">
                                 <img src="img/carousel.jpg" alt="slider">
@@ -326,19 +330,19 @@
                 </section>
                 <section class="team">
                     <div class="team__container container">
-                        <h3 class="team__title title--slash">НАША КОМАНДА</h3>
+                        <h3 class="team__title title--slash" data-aos="fade-up">НАША КОМАНДА</h3>
                         <div class="team__teachers">
-                            <div class="team__teacher">
+                            <div class="team__teacher" data-aos="fade-right">
                                 <img class="teacher__img" src="img/team/teacher1.svg" alt="">
                                 <div class="teacher__name">Mike</div>
                                 <div class="teacher__post">Главный инстуктор</div>
                             </div>
-                            <div class="team__teacher">
+                            <div class="team__teacher" data-aos="fade-left">
                                 <img class="teacher__img" src="img/team/teacher2.svg" alt="">
                                 <div class="teacher__name">Mary</div>
                                 <div class="teacher__post">инстуктор</div>
                             </div>
-                            <div class="team__teacher">
+                            <div class="team__teacher"  data-aos="fade-right">
                                 <img class="teacher__img" src="img/team/teacher3.svg" alt="">
                                 <div class="teacher__name">Ольга</div>
                                 <div class="teacher__post">инстуктор</div>
@@ -348,9 +352,9 @@
                 </section>
                 <section class="prices">
                     <div class="prices__container container">
-                        <h3 class="prices__title title title--slash">ПАКЕТЫ УСЛУГ</h3>
+                        <h3 class="prices__title title title--slash" data-aos="fade-up">ПАКЕТЫ УСЛУГ</h3>
                         <div class="prices__packages">
-                            <div class="packages__item">
+                            <div class="packages__item" data-aos="fade-right">
                                 <div class="packages__item-title">Стандарт</div>
                                 <div class="packages__item-text">
                                     <p class="packages__item-poin">Проживание на вилле 6 ночей </p>
@@ -360,12 +364,12 @@
                                     <p class="packages__item-poin">Страховка</p>
                                     <p class="packages__item-poin">Вечеринка с угощениями и дискотекой</p>
                                 </div>   
-                                <div class="packages-price">
+                                <div class="packages-price"">
                                     <span class="price-value">450</span>
                                     <span class="price-symbol">$</span>
                                 </div>              
                             </div>
-                            <div class="packages__item">
+                            <div class="packages__item" data-aos="fade-left">
                                 <div class="packages__item-title">Все включено</div>
                                 <div class="packages__item-text">
                                     <p class="packages__item-poin">Проживание на вилле 6 ночей </p>
@@ -383,7 +387,7 @@
                                 </div>
 
                             </div>
-                            <div class="packages__item">
+                            <div class="packages__item" data-aos="fade-right">
                                 <div class="packages__item-title">Стандарт</div>
                                 <div class="packages__item-text">
                                     <p class="packages__item-poin">Проживание на вилле 8 ночей </p>
@@ -405,10 +409,10 @@
                 </section>
                 <section class="feedback">
                     <div class="feedback__container container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592821.0957706673!2d-18.09757566329791!3d28.43089131661889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41aa86ef755363%3A0x10340f3be4bc8c0!2z0JrQsNC90LDRgNGB0YzQutGWINC-LdCy0LgsINCG0YHQv9Cw0L3RltGP!5e0!3m2!1suk!2sua!4v1676147485963!5m2!1suk!2sua" width="100%" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <div class="feedback__title title title--slash">ОСТАВИТЬ ЗАЯВКУ</div>
+                        <iframe data-aos="zoom-in-down" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592821.0957706673!2d-18.09757566329791!3d28.43089131661889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41aa86ef755363%3A0x10340f3be4bc8c0!2z0JrQsNC90LDRgNGB0YzQutGWINC-LdCy0LgsINCG0YHQv9Cw0L3RltGP!5e0!3m2!1suk!2sua!4v1676147485963!5m2!1suk!2sua" width="100%" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <h3 class="feedback__title title title--slash" data-aos="fade-up">ОСТАВИТЬ ЗАЯВКУ</h3>
                         <div class="feedback__content">
-                            <form class="form" action="">
+                            <form class="form" action="" data-aos="fade-right">
                                 <div class="feedback__form-container">
                                     <input class="feedback__input"  type="text" name="" id="" placeholder="Ім'я">
                                     <input class="feedback__input"  type="tel" name="" id="" placeholder="Телефон">
@@ -420,7 +424,7 @@
                                     <button class="form__button" type="submit">ОТПРАВИТЬ</button>
                                 </div>
                             </form>
-                            <div class="feedback__contacts">
+                            <div class="feedback__contacts" data-aos="fade-left">
                                 <div class="feedback__contacts-items">
                                     <p class="feedback__contacts-item">Есть вопрос?Вы можете связаться с нами:</p>
                                     <p class="feedback__contacts-item">WhatsApp, Viber, Telegram +3 467 486-37-88</p>
@@ -444,7 +448,16 @@
                 </div>
             </footer>
         </div>
+        <script src="js/script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+            AOS.init({
+                duration: 700, // values from 0 to 3000, with step 50ms
+                once: true, // whether animation should happen only once - while scrolling down
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/d5edb95c4a.js" crossorigin="anonymous"></script>
     </body>
-    <script src="js/script.js"></script>
 
 </html>
