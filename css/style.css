@@ -138,6 +138,7 @@ body {
     right: 0;
     position: fixed;
     display: flex;
+    overflow: auto;
     align-items: center;
     justify-content: center;
     animation-name: modal;
