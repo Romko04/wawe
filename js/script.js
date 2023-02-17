@@ -1,15 +1,15 @@
-
 //--GALLERY
 const galleryNode = document.querySelectorAll('.gallery__items')
 let modalGallery = document.querySelector('.gallery__modal')
 let counterNoname = document.querySelector('.noname__counter')
+const menuBody = document.querySelector('.menu__body');
 document.addEventListener('click', (e) => {
     e.preventDefault()
     if (e.target.classList.contains('gallery__item-link')) {
         addActiveClass(e)
         filter(e.target.dataset.f)
     }
-    if (e.target.localName === 'img') {
+    if (e.target.classList.contains('gallery__img')) {
         openModal(e.target.src)
     }
     if (e.target.classList.contains('modal')) {
@@ -21,13 +21,40 @@ document.addEventListener('click', (e) => {
         sliderBtns.forEach(btn => btn.classList.contains('btn--active')? btn.classList.remove('btn--active'):'')
         carousel(e.target.dataset.value)
     }
+    if (e.target.classList.contains('anchor')) {
+        const activeAnchor = document.querySelector('.menu__link-active')
+        activeAnchor.classList.remove('menu__link-active')
+        e.target.classList.add('menu__link-active')
+        if (menuBody.classList.contains('_active')) {
+            menuBody.classList.toggle('_active');
+            btn.classList.toggle('_active');
+            btn.classList.contains('_active') ? document.body.classList.add('scroll--block') : document.body.classList.remove('scroll--block')
+        }
+        const blockId = e.target.getAttribute('href')
+        document.querySelector(''+ blockId).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            
+        })
+    }
 })
 document.addEventListener('scroll', (e) => {
     let noname = document.querySelector('.noname')
+    let heade = document.querySelector('.header')
+    let poster = document.querySelector('.header__poster')
+    let posterCenter = poster.offsetHeight / 2
     let scrolTop = window.scrollY
+    let header = document.querySelector('.header__container')
     if (scrolTop >= noname.offsetTop && !counterNoname.classList.contains('active')) {
         const counters = document.querySelectorAll('.count__value')
         counters.forEach(e => counter(e.dataset.value, e.id))
+    }
+    if (scrolTop >= posterCenter) {
+        header.classList.add('fixed')
+         heade.style.paddingBottom = `${header.offsetHeight}px`
+    } else {
+        header.classList.remove('fixed')
+         heade.style.paddingBottom = `0px`
     }
 })
 function filter(viev) {
@@ -110,7 +137,6 @@ function slidesFun() {
     return slidesList
 }
 const btn = document.querySelector('.header__burger');
-const menuBody = document.querySelector('.menu__body');
 btn.addEventListener('click', mouseclick);
 function mouseclick() {
     menuBody.classList.toggle('_active');
@@ -118,5 +144,3 @@ function mouseclick() {
     btn.classList.contains('_active')?document.body.classList.add('scroll--block'):document.body.classList.remove('scroll--block')
 
 }
-
-
