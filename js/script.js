@@ -23,7 +23,7 @@ document.addEventListener('click', (e) => {
     }
     if (e.target.classList.contains('anchor')) {
         const activeAnchor = document.querySelector('.menu__link-active')
-        activeAnchor.classList.remove('menu__link-active')
+        activeAnchor && activeAnchor.classList.remove('menu__link-active')
         e.target.classList.add('menu__link-active')
         if (menuBody.classList.contains('_active')) {
             menuBody.classList.toggle('_active');
