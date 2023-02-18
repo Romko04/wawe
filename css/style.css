@@ -200,7 +200,7 @@ body {
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 129%;
     letter-spacing: 0.6px;
     color: #242121;
@@ -491,6 +491,7 @@ body {
 .teachers__img{
     height: 850px;
     width: 960px;
+    margin-left: 41px;
 }
 .teachers__title{
     text-align: center;
@@ -508,7 +509,7 @@ body {
     flex-direction: column;
     gap: 100px;
     max-width: 560px;
-    margin: 200px 0 0 462px;
+    text-align: left;
 }
 
 .teachers__text {
@@ -627,6 +628,7 @@ body {
 .noname__counter {
     display: flex;
     justify-content: space-between;
+    margin: 0 150px;
 }
 
 .count__value {
@@ -748,14 +750,15 @@ body {
 }
 .teachers__container {
     display: flex;
+    justify-content: center;
 }
 .teachers__content {
     display: flex;
     flex-direction: column;
     gap: 100px;
     max-width: 560px;
-    margin: 0 0 0 15%;
     padding: 72px 15px;
+    margin-left: 350px;
     /* margin: 0 */
 }
 
@@ -924,6 +927,7 @@ body {
     line-height: 75%;
     text-align: center;
     letter-spacing: 0.6px;
+    
     cursor: pointer;
     color: #242121;
     background: #FFFFFF;
@@ -1033,13 +1037,20 @@ color: #00B2A0;
 /*-----------ADAPTIV*/
 /*pc*/
 @media (max-width: 1695px) {
+    .text {
+        font-size: 20px;
+    }
     .teachers__container{
         flex-direction: column;
         align-items: center;
     }
     .teachers__content {
-        margin: 0;
-        /* margin: 0 */
+        margin-left: 0;
+    }
+    .teachers__img {
+        height: 850px;
+        width: 960px;
+        margin-left: 0;
     }
   }
   /*tablet*/
@@ -1161,6 +1172,7 @@ color: #00B2A0;
     .noname__counter {
         flex-direction: column;
         align-items: center;
+        margin: 0;
         gap: 30px;
     }
     .team__teachers {
@@ -1279,30 +1291,15 @@ color: #00B2A0;
 
         
 }
-    /* .gallery__items {
-        display: grid;
-        gap: 10px 17px;
-        grid-template-columns: repeat(2, 1fr);
-    } */
-    
-
-    /* 
-    } */
 @media (min-width: 2435.98px) {
     .slider__item img {
         height: 1095px;
     }
-    .teachers__content {
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-        max-width: 560px;
-        margin: 0 0 0 30%;
-        padding: 72px 15px;
-        /* margin: 0; */
-    }
 }
 @media (max-width: 576px) {
+    .text {
+        font-size: 15px;
+    }
     .poster__title {
         font-size: 65px;
         line-height: 134px;
