@@ -139,6 +139,7 @@ body {
     position: fixed;
     display: flex;
     overflow: auto;
+    z-index: 2;
     align-items: center;
     justify-content: center;
     animation-name: modal;
@@ -558,6 +559,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
 }
+.hide {
+    display: none;
+}
 
 .gallery__img:hover {
     cursor: pointer;
@@ -577,10 +581,6 @@ body {
 
 .gallery__img-big {
     grid-column: span 2;
-}
-
-.hide {
-    display: none;
 }
 
 .gallery__vievs {
@@ -625,7 +625,6 @@ body {
 }
 
 .noname__counter {
-    padding: 0 200px;
     display: flex;
     justify-content: space-between;
 }
@@ -1095,7 +1094,7 @@ color: #00B2A0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(51, 51, 51, 1.222586);
+        background-color: black;
         padding: 90px 15px 30px 15px;
         transition: left ease .3s;
         overflow: auto;
@@ -1160,7 +1159,6 @@ color: #00B2A0;
         gap: 82px;
     }
     .noname__counter {
-        padding: 0 200px;
         flex-direction: column;
         align-items: center;
         gap: 30px;
@@ -1226,7 +1224,6 @@ color: #00B2A0;
     .about__container {
         padding: 160px 15px 200px;
         margin-top: 585px;
-}
     }
     .about__content-item {
         align-items: flex-start;
@@ -1279,6 +1276,9 @@ color: #00B2A0;
     .about__title{
         margin-top: 66px;
     }
+
+        
+}
     /* .gallery__items {
         display: grid;
         gap: 10px 17px;
@@ -1314,14 +1314,6 @@ color: #00B2A0;
         width: 150px;
         /* max-width: 100%; */
     }
-    
-    .gallery__items {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            /* gap: 10px 40px; */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
     .gallery__list {
         display: flex;
         gap: 20px;
@@ -1348,4 +1340,17 @@ color: #00B2A0;
     .slider__buttons {
         gap: 15px;
     }
+    .gallery__items{
+        display: flex;
+        flex-direction: column;
+    }
+    .hide {
+        display: none;
+    }
+    .blog__title {
+        text-align: center;
+        margin-bottom: 143px;
+    }
+    
+    
 }
