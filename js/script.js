@@ -37,8 +37,8 @@ document.addEventListener('click', (e) => {
     if (e.target.classList.contains('anchor')) {
         anchorClick(e.target)
     }
-    if (e.target.classList.contains('.header__burger')) {
-        mouseclick()
+    if (e.target.classList.contains('header__burger')) {
+        toggleMenu()
     }
 })
 document.addEventListener('scroll', (e) => {
@@ -124,6 +124,7 @@ function anchorClick(e) {
         })
 }
 function toggleMenu() {
+    const btn = document.querySelector('.header__burger');
     menuBody.classList.toggle('_active');
     btn.classList.toggle('_active');
     btn.classList.contains('_active') ? document.body.classList.add('scroll--block') : document.body.classList.remove('scroll--block')

@@ -1046,7 +1046,7 @@ color: #00B2A0;
         width: 960px;
         margin-left: 0;
     }
-    .fixed {
+    .header__container{
         padding: 15px 15px;
     }
     .header__menu-link {
@@ -1349,7 +1349,7 @@ color: #00B2A0;
         line-height: 134px;
     }
     .title--slash {
-        font-size: 30px;;
+        font-size: 26px;
     }
     .services__statistic-item__img {
         width: 150px;
