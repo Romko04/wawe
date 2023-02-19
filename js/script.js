@@ -1,4 +1,21 @@
 //--GALLERY
+
+AOS.init();
+AOS.init({
+    duration: 700, // values from 0 to 3000, with step 50ms
+    once: true, // whether animation should happen only once - while scrolling down
+});
+const swiper = new Swiper('.swiper', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+      },
+    loop: true,
+    autoplay: {
+        delay: 2500,
+    },
+});
 const galleryNode = document.querySelectorAll('.gallery__items')
 let modalGallery = document.querySelector('.gallery__modal')
 let counterNoname = document.querySelector('.noname__counter')
@@ -107,35 +124,7 @@ function counter(num, elem) {
     counterNoname.classList.add('active')
 }
 
-//--CAROUSEL
-function carousel(count) {
-    chandeClassCarousel(count, true)
-    slidesList = slidesFun()
-    slidesList[count].classList.remove('hide')
-    step = count
-    interval = setInterval(() => {
-        slidesList.forEach(i => !i.classList.contains('hide')? i.classList.add('hide'):'')
-        chandeClassCarousel(step, false)
-        step ++
-        step > slidesList.length-1 ? step = 0 : null
-        slidesList[step].classList.remove('hide')
-        chandeClassCarousel(step, true)
-    }, 5000);
-}
-carousel(0)
-function chandeClassCarousel(count, action) {
-    btnSlide = document.querySelector(`[data-value="${count}"]`)
-    action?btnSlide.classList.add('btn--active'):btnSlide.classList.remove('btn--active')
-}
-function slidesFun() {
-    const slides = document.querySelectorAll('.slider__item')
-    let slidesList = []
-    slides.forEach(i=>{
-        slidesList.push(i)
-        slides.forEach(i => !i.classList.contains('hide')? i.classList.add('hide'):'')
-    })
-    return slidesList
-}
+
 const btn = document.querySelector('.header__burger');
 btn.addEventListener('click', mouseclick);
 function mouseclick() {

@@ -12,6 +12,7 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap"
             rel="stylesheet">
         <link href="css/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/style.css">
     </head>
 
@@ -268,50 +269,48 @@
                     </div>
                 </section>
                 <section class="blog" id="blog">
-                    <h3 class="blog__title title title--slash" data-aos="fade-up">БЛОГ</h3>
-                    <div class="blog__slider" data-aos="fade-up">
-                        <div class="slider__container">
-                            <div data-count="0" class="slider__item">
-                                <img src="img/carousel.jpg" alt="slider">
-                            </div>
-                            <div data-count="1" class="slider__item hide">
-                                <img src="img/profy/gallery6.jpg" alt="slider">
-                            </div>
-                            <div data-count="2" class="slider__item hide">
-                                <img src="img/nature/nature1.jpg" alt="slider">
-                            </div>
-                            <div data-count="3" class="slider__item hide">
-                                <img src="img/nature/nature2.jpg" alt="slider">
-                            </div>
-                            <div data-count="4" class="slider__item hide">
-                                <img src="img/nature/nature3.jpg"" alt="slider">
-                            </div>
-                            <div data-count="5" class="slider__item hide">
-                                <img src="img/nature/nature4.jpg"" alt="slider">
-                            </div>
-                            <div data-count="6" class="slider__item hide">
-                                <img src="img/nature/nature5.jpg"" alt="slider">
-                            </div>
-                            <div data-count="7"class="slider__item hide">
-                                <img src="img/nature/nature6.jpg"" alt="slider">
-                            </div>
-                            <div data-count="8" class="slider__item hide">
-                                <img src="img/tourists/tourists1.jpg"" alt="slider">
-                            </div>
-                            <div class="slider__buttons">
-                                <span data-value="0" class="slider__btn btn--active"></span>
-                                <span data-value="1" class="slider__btn"></span>
-                                <span data-value="2" class="slider__btn"></span>
-                                <span data-value="3" class="slider__btn"></span>
-                                <span data-value="4" class="slider__btn"></span>
-                                <span data-value="5" class="slider__btn"></span>
-                                <span data-value="6" class="slider__btn"></span>
-                                <span data-value="7" class="slider__btn"></span>
-                                <span data-value="8" class="slider__btn"></span>
-                            </div>
-                            <div class="slider__content">
-                                <h4 class="slider__content__title">ЩО ПОТРІБНО ВЗЯТИ З СОБОЮ В СЕРФ-ТУР</h4>
-                                <p class="slider__content-text">ТОП-20 необхідних речей для комфортного відпочинку і тренувань</p>
+                    <h3 class="blog__title title--slash title" data-aos="fade-up">БЛОГ</h3>
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="swiper__image">
+                                            <img src="img/tourists/tourists1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper__image">
+                                            <img src="img/profy/gallery6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper__image">
+                                            <img src="img/tourists/tourists6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper__image">
+                                            <img src="img/nature/nature4.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper__image">
+                                            <img src="img/nature/nature5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper__image">
+                                            <img src="img/nature/nature6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                                <div class="slider__content">
+                                    <h4 class="slider__content__title">ЩО ПОТРІБНО ВЗЯТИ З СОБОЮ В СЕРФ-ТУР</h4>
+                                    <p class="slider__content-text">ТОП-20 необхідних речей для комфортного відпочинку і тренувань</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -439,14 +438,10 @@
                 </div>
             </footer>
         </div>
-        <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="js/aos.js"></script>
+        <script src="js/script.js"></script>
         <script>
-          AOS.init();
-            AOS.init({
-                duration: 700, // values from 0 to 3000, with step 50ms
-                once: true, // whether animation should happen only once - while scrolling down
-            });
         </script>
         <script src="https://kit.fontawesome.com/d5edb95c4a.js" crossorigin="anonymous"></script>
     </body>
