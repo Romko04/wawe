@@ -1148,7 +1148,7 @@ color: #00B2A0;
     .header__burger._active span {
        display: none;
     }
-    .title--slash{
+    .title{
         font-size: 60px;
     }
     .container{
@@ -1296,7 +1296,7 @@ color: #00B2A0;
     .slider__btn {
         margin-right: 9px;
     }
-    .title--slash{
+    .title{
         font-size: 50px;
     }
     .gallery__img-big {
@@ -1348,7 +1348,7 @@ color: #00B2A0;
         font-size: 65px;
         line-height: 134px;
     }
-    .title--slash {
+    .title {
         font-size: 26px;
     }
     .services__statistic-item__img {

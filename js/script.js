@@ -120,7 +120,7 @@ function anchorClick(e) {
         document.querySelector(''+ blockId).scrollIntoView({
             behavior: "smooth",
             block: "start",
-            
+            inline: "nearest"
         })
 }
 function toggleMenu() {
