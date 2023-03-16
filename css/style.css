@@ -279,6 +279,9 @@ body {
     color: #fff;
     position: relative;
 }
+.header__menu-link:hover {
+    color: #00B2A0;
+}
 
 .menu__link-active::after {
     content: '';
@@ -816,8 +819,11 @@ body {
     padding-bottom: 125px;
     background: #FFFFFF;
     position: relative;
+    transition: transform 0.2s ease-in-out;
 }
-
+.packages__item:hover{
+    transform: scale(1.05);
+}
 .packages__item-title {
     text-align: center;
     margin-bottom: 60px;
@@ -1003,7 +1009,7 @@ color: #00B2A0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 70px 0;
+    padding: 2rem 0;
     background-color: #00B2A0;
 }
 
@@ -1306,7 +1312,7 @@ color: #00B2A0;
         width: 100%;
     }
     .modal__content-img {
-        width: 155%;
+        width: 100%;
     }
     .header__scroll {
         margin-top: 405px;
